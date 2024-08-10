@@ -80,7 +80,7 @@ namespace Hospital_System
         public void EditarHospital(string nombre, string direccion , string telefono , string cantidadCamas , int codigoHospital)
         {
             Editar(Convert.ToInt32(codigoHospital), nombre, direccion, telefono, cantidadCamas);
-           
+          
         }
 
     }
