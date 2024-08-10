@@ -67,7 +67,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(2, 1, 0, 1);
-            menuStrip1.Size = new Size(1094, 38);
+            menuStrip1.Size = new Size(1094, 28);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -76,7 +76,7 @@
             eNTRADAToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { iNGRESARToolStripMenuItem, aTRASToolStripMenuItem });
             eNTRADAToolStripMenuItem.ForeColor = Color.MediumAquamarine;
             eNTRADAToolStripMenuItem.Name = "eNTRADAToolStripMenuItem";
-            eNTRADAToolStripMenuItem.Size = new Size(163, 36);
+            eNTRADAToolStripMenuItem.Size = new Size(112, 26);
             eNTRADAToolStripMenuItem.Text = "ENTRADA";
             // 
             // iNGRESARToolStripMenuItem
@@ -84,14 +84,14 @@
             iNGRESARToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nUEVOHOSPITALToolStripMenuItem, nUEVOPACIENTEToolStripMenuItem, nUEVOMEDICOToolStripMenuItem, nUEVODIAGNOSTICOToolStripMenuItem, nUEVOLABORATORIOToolStripMenuItem });
             iNGRESARToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             iNGRESARToolStripMenuItem.Name = "iNGRESARToolStripMenuItem";
-            iNGRESARToolStripMenuItem.Size = new Size(240, 34);
+            iNGRESARToolStripMenuItem.Size = new Size(180, 24);
             iNGRESARToolStripMenuItem.Text = "INGRESAR";
             // 
             // nUEVOHOSPITALToolStripMenuItem
             // 
             nUEVOHOSPITALToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             nUEVOHOSPITALToolStripMenuItem.Name = "nUEVOHOSPITALToolStripMenuItem";
-            nUEVOHOSPITALToolStripMenuItem.Size = new Size(356, 36);
+            nUEVOHOSPITALToolStripMenuItem.Size = new Size(240, 24);
             nUEVOHOSPITALToolStripMenuItem.Text = "NUEVO HOSPITAL";
             nUEVOHOSPITALToolStripMenuItem.Click += nUEVOHOSPITALToolStripMenuItem_Click;
             // 
@@ -99,35 +99,39 @@
             // 
             nUEVOPACIENTEToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             nUEVOPACIENTEToolStripMenuItem.Name = "nUEVOPACIENTEToolStripMenuItem";
-            nUEVOPACIENTEToolStripMenuItem.Size = new Size(356, 36);
+            nUEVOPACIENTEToolStripMenuItem.Size = new Size(240, 24);
             nUEVOPACIENTEToolStripMenuItem.Text = "NUEVO PACIENTE";
+            nUEVOPACIENTEToolStripMenuItem.Click += nUEVOPACIENTEToolStripMenuItem_Click;
             // 
             // nUEVOMEDICOToolStripMenuItem
             // 
             nUEVOMEDICOToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             nUEVOMEDICOToolStripMenuItem.Name = "nUEVOMEDICOToolStripMenuItem";
-            nUEVOMEDICOToolStripMenuItem.Size = new Size(356, 36);
+            nUEVOMEDICOToolStripMenuItem.Size = new Size(240, 24);
             nUEVOMEDICOToolStripMenuItem.Text = "NUEVO LABORATORIO";
+            nUEVOMEDICOToolStripMenuItem.Click += nUEVOMEDICOToolStripMenuItem_Click;
             // 
             // nUEVODIAGNOSTICOToolStripMenuItem
             // 
             nUEVODIAGNOSTICOToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             nUEVODIAGNOSTICOToolStripMenuItem.Name = "nUEVODIAGNOSTICOToolStripMenuItem";
-            nUEVODIAGNOSTICOToolStripMenuItem.Size = new Size(356, 36);
+            nUEVODIAGNOSTICOToolStripMenuItem.Size = new Size(240, 24);
             nUEVODIAGNOSTICOToolStripMenuItem.Text = "NUEVO MEDICO";
+            nUEVODIAGNOSTICOToolStripMenuItem.Click += nUEVODIAGNOSTICOToolStripMenuItem_Click;
             // 
             // nUEVOLABORATORIOToolStripMenuItem
             // 
             nUEVOLABORATORIOToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             nUEVOLABORATORIOToolStripMenuItem.Name = "nUEVOLABORATORIOToolStripMenuItem";
-            nUEVOLABORATORIOToolStripMenuItem.Size = new Size(356, 36);
+            nUEVOLABORATORIOToolStripMenuItem.Size = new Size(240, 24);
             nUEVOLABORATORIOToolStripMenuItem.Text = "NUEVO DIAGNOSTICO";
+            nUEVOLABORATORIOToolStripMenuItem.Click += nUEVOLABORATORIOToolStripMenuItem_Click;
             // 
             // aTRASToolStripMenuItem
             // 
             aTRASToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             aTRASToolStripMenuItem.Name = "aTRASToolStripMenuItem";
-            aTRASToolStripMenuItem.Size = new Size(240, 34);
+            aTRASToolStripMenuItem.Size = new Size(163, 24);
             aTRASToolStripMenuItem.Text = "ATRAS";
             aTRASToolStripMenuItem.Click += aTRASToolStripMenuItem_Click;
             // 
@@ -136,14 +140,14 @@
             cONSULTAToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { hOSPITALToolStripMenuItem, pACIENTEToolStripMenuItem, lABORATORIOToolStripMenuItem, dIAGNOSTICOToolStripMenuItem, mEDICOToolStripMenuItem });
             cONSULTAToolStripMenuItem.ForeColor = Color.MediumAquamarine;
             cONSULTAToolStripMenuItem.Name = "cONSULTAToolStripMenuItem";
-            cONSULTAToolStripMenuItem.Size = new Size(175, 36);
+            cONSULTAToolStripMenuItem.Size = new Size(123, 26);
             cONSULTAToolStripMenuItem.Text = "CONSULTA";
             // 
             // hOSPITALToolStripMenuItem
             // 
             hOSPITALToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             hOSPITALToolStripMenuItem.Name = "hOSPITALToolStripMenuItem";
-            hOSPITALToolStripMenuItem.Size = new Size(273, 36);
+            hOSPITALToolStripMenuItem.Size = new Size(183, 24);
             hOSPITALToolStripMenuItem.Text = "HOSPITAL";
             hOSPITALToolStripMenuItem.Click += hOSPITALToolStripMenuItem_Click;
             // 
@@ -151,44 +155,48 @@
             // 
             pACIENTEToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             pACIENTEToolStripMenuItem.Name = "pACIENTEToolStripMenuItem";
-            pACIENTEToolStripMenuItem.Size = new Size(273, 36);
+            pACIENTEToolStripMenuItem.Size = new Size(183, 24);
             pACIENTEToolStripMenuItem.Text = "PACIENTE";
+            pACIENTEToolStripMenuItem.Click += pACIENTEToolStripMenuItem_Click;
             // 
             // lABORATORIOToolStripMenuItem
             // 
             lABORATORIOToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             lABORATORIOToolStripMenuItem.Name = "lABORATORIOToolStripMenuItem";
-            lABORATORIOToolStripMenuItem.Size = new Size(273, 36);
+            lABORATORIOToolStripMenuItem.Size = new Size(183, 24);
             lABORATORIOToolStripMenuItem.Text = "LABORATORIO";
+            lABORATORIOToolStripMenuItem.Click += lABORATORIOToolStripMenuItem_Click;
             // 
             // dIAGNOSTICOToolStripMenuItem
             // 
             dIAGNOSTICOToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             dIAGNOSTICOToolStripMenuItem.Name = "dIAGNOSTICOToolStripMenuItem";
-            dIAGNOSTICOToolStripMenuItem.Size = new Size(273, 36);
+            dIAGNOSTICOToolStripMenuItem.Size = new Size(183, 24);
             dIAGNOSTICOToolStripMenuItem.Text = "MEDICO";
+            dIAGNOSTICOToolStripMenuItem.Click += dIAGNOSTICOToolStripMenuItem_Click;
             // 
             // mEDICOToolStripMenuItem
             // 
             mEDICOToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             mEDICOToolStripMenuItem.Name = "mEDICOToolStripMenuItem";
-            mEDICOToolStripMenuItem.Size = new Size(273, 36);
+            mEDICOToolStripMenuItem.Size = new Size(183, 24);
             mEDICOToolStripMenuItem.Text = "DIAGNOSTICO";
+            mEDICOToolStripMenuItem.Click += mEDICOToolStripMenuItem_Click;
             // 
             // aCERCADEToolStripMenuItem
             // 
             aCERCADEToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mEIMBROSDELGRUPOToolStripMenuItem });
             aCERCADEToolStripMenuItem.ForeColor = Color.MediumAquamarine;
             aCERCADEToolStripMenuItem.Name = "aCERCADEToolStripMenuItem";
-            aCERCADEToolStripMenuItem.Size = new Size(188, 36);
+            aCERCADEToolStripMenuItem.Size = new Size(130, 26);
             aCERCADEToolStripMenuItem.Text = "ACERCA DE";
             // 
             // mEIMBROSDELGRUPOToolStripMenuItem
             // 
             mEIMBROSDELGRUPOToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             mEIMBROSDELGRUPOToolStripMenuItem.Name = "mEIMBROSDELGRUPOToolStripMenuItem";
-            mEIMBROSDELGRUPOToolStripMenuItem.Size = new Size(376, 36);
-            mEIMBROSDELGRUPOToolStripMenuItem.Text = "MEIMBROS DEL GRUPO";
+            mEIMBROSDELGRUPOToolStripMenuItem.Size = new Size(249, 24);
+            mEIMBROSDELGRUPOToolStripMenuItem.Text = "MIEMBROS DEL GRUPO";
             // 
             // pictureBox1
             // 

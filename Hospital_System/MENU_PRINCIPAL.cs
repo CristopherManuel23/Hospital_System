@@ -44,15 +44,55 @@ namespace Hospital_System
         private void MAXIMIZAR_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Normal) this.WindowState = FormWindowState.Maximized;
-            
-                else this.WindowState = FormWindowState.Normal;
-            
+
+            else this.WindowState = FormWindowState.Normal;
+
         }
 
         private void hOSPITALToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CONSULTA_HOSPITAL nuevo_hospital = new CONSULTA_HOSPITAL();
             nuevo_hospital.Show();
+        }
+
+        private void pACIENTEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lABORATORIOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dIAGNOSTICOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mEDICOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nUEVOPACIENTEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nUEVOMEDICOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nUEVODIAGNOSTICOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nUEVOLABORATORIOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
