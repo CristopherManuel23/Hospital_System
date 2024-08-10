@@ -1,6 +1,6 @@
 ﻿namespace Hospital_System
 {
-    partial class Form1
+    partial class LOGIN
     {
         /// <summary>
         ///  Required designer variable.
@@ -35,7 +35,6 @@
             pictureBox1 = new PictureBox();
             btncerrar = new PictureBox();
             btnminimizar = new PictureBox();
-            textBox1 = new TextBox();
             btncancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btncerrar).BeginInit();
@@ -77,11 +76,11 @@
             btningrsar.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
             btningrsar.FlatStyle = FlatStyle.Popup;
             btningrsar.Font = new Font("Times New Roman", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            btningrsar.ForeColor = Color.MediumTurquoise;
+            btningrsar.ForeColor = Color.MediumAquamarine;
             btningrsar.Location = new Point(79, 749);
             btningrsar.Name = "btningrsar";
             btningrsar.Size = new Size(182, 44);
-            btningrsar.TabIndex = 4;
+            btningrsar.TabIndex = 0;
             btningrsar.Text = "INGRESAR";
             btningrsar.UseVisualStyleBackColor = false;
             btningrsar.Click += btningrsar_Click;
@@ -90,7 +89,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 20F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.ForeColor = Color.MediumTurquoise;
+            label1.ForeColor = Color.MediumAquamarine;
             label1.Location = new Point(79, 83);
             label1.Name = "label1";
             label1.Size = new Size(442, 46);
@@ -128,32 +127,24 @@
             btnminimizar.TabStop = false;
             btnminimizar.Click += btnminimizar_Click;
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(745, 458);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(150, 31);
-            textBox1.TabIndex = 0;
-            // 
             // btncancelar
             // 
             btncancelar.FlatStyle = FlatStyle.Popup;
             btncancelar.Font = new Font("Times New Roman", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            btncancelar.ForeColor = Color.MediumTurquoise;
+            btncancelar.ForeColor = Color.MediumAquamarine;
             btncancelar.Location = new Point(312, 749);
             btncancelar.Name = "btncancelar";
             btncancelar.Size = new Size(182, 44);
-            btncancelar.TabIndex = 11;
+            btncancelar.TabIndex = 5;
             btncancelar.Text = "CANCELAR";
             btncancelar.Click += btncancelar_Click;
             // 
-            // Form1
+            // LOGIN
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(585, 919);
-            Controls.Add(textBox1);
+            ClientSize = new Size(583, 919);
             Controls.Add(btnminimizar);
             Controls.Add(btncerrar);
             Controls.Add(pictureBox1);
@@ -163,7 +154,7 @@
             Controls.Add(txtcontrasenia);
             Controls.Add(txtusuario);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Form1";
+            Name = "LOGIN";
             Opacity = 0.9D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -183,7 +174,6 @@
         private PictureBox pictureBox1;
         private PictureBox btncerrar;
         private PictureBox btnminimizar;
-        private TextBox textBox1;
         private Button btncancelar;
     }
 }

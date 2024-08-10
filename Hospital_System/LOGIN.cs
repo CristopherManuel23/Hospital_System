@@ -1,14 +1,19 @@
+using System.Data.SqlClient;
+
 namespace Hospital_System
 {
-    public partial class Form1 : Form
+    public partial class LOGIN : Form
     {
-        public Form1()
+        Conexion conexion = new Conexion();
+        SqlCommand comando = new SqlCommand();
+        public LOGIN()
         {
             InitializeComponent();
         }
 
         private void txtusuario_Enter(object sender, EventArgs e)
         {
+            
             if (txtusuario.Text == "USUARIO")
             {
                 txtusuario.Text = "";
@@ -51,13 +56,40 @@ namespace Hospital_System
 
         private void btningrsar_Click(object sender, EventArgs e)
         {
-            if (txtusuario.Text == "rzorrilla" && txtcontrasenia.Text == "12345" || txtusuario.Text == "Creadores" && txtcontrasenia.Text == "656794")
+
+            try
             {
-                MessageBox.Show("Bienvenido al sistema");
+                conexion.AbrirConexion();
+
+                string query = "SELECT COUNT(*) FROM ACCESO WHERE usuario = @usuario AND contraseña = @contrasenia";
+                using (SqlCommand cmd = new SqlCommand(query, conexion.AbrirConexion()))
+                {
+                    cmd.Parameters.AddWithValue("@usuario", txtusuario.Text);
+                    cmd.Parameters.AddWithValue("@contrasenia", txtcontrasenia.Text);
+
+                    int count = (int)cmd.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Bienvenido al sistema");
+                        MENU_PRINCIPAL MP = new MENU_PRINCIPAL();
+                        MP.Show();
+                        this.Hide();
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Datos Incorrectos");
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Datos Incorrectos");
+                MessageBox.Show("Error al abrir la conexión: " + ex.Message);
+            }
+            finally
+            {
+                conexion.CerrarConexion();
             }
 
         }
@@ -69,7 +101,7 @@ namespace Hospital_System
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
 
         private void btnminimizar_Click(object sender, EventArgs e)
@@ -81,7 +113,5 @@ namespace Hospital_System
         {
 
         }
-
-        
     }
 }
