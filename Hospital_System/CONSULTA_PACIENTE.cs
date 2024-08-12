@@ -85,7 +85,7 @@ namespace Hospital_System
             }
         }
 
-
+        //jdjhgj
         private void btneliminar_Click_1(object sender, EventArgs e)
         {
             try
