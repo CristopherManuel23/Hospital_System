@@ -93,6 +93,16 @@ namespace Hospital_System.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hosp {
+            get {
+                object obj = ResourceManager.GetObject("Hosp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lodo3_0 {
             get {
                 object obj = ResourceManager.GetObject("lodo3.0", resourceCulture);

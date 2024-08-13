@@ -40,10 +40,9 @@
             btneliminar.BackColor = Color.Black;
             btneliminar.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btneliminar.ForeColor = Color.MediumAquamarine;
-            btneliminar.Location = new Point(200, 307);
-            btneliminar.Margin = new Padding(2);
+            btneliminar.Location = new Point(268, 502);
             btneliminar.Name = "btneliminar";
-            btneliminar.Size = new Size(121, 39);
+            btneliminar.Size = new Size(173, 52);
             btneliminar.TabIndex = 31;
             btneliminar.Text = "ELIMINAR";
             btneliminar.UseVisualStyleBackColor = false;
@@ -54,10 +53,9 @@
             btneditar.BackColor = Color.Black;
             btneditar.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btneditar.ForeColor = Color.MediumAquamarine;
-            btneditar.Location = new Point(38, 307);
-            btneditar.Margin = new Padding(2);
+            btneditar.Location = new Point(55, 502);
             btneditar.Name = "btneditar";
-            btneditar.Size = new Size(121, 39);
+            btneditar.Size = new Size(173, 52);
             btneditar.TabIndex = 30;
             btneditar.Text = "EDITAR";
             btneditar.UseVisualStyleBackColor = false;
@@ -69,10 +67,9 @@
             linkLabel1.BackColor = Color.Black;
             linkLabel1.Font = new Font("Times New Roman", 20F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             linkLabel1.LinkColor = Color.MediumAquamarine;
-            linkLabel1.Location = new Point(38, 39);
-            linkLabel1.Margin = new Padding(2, 0, 2, 0);
+            linkLabel1.Location = new Point(54, 65);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(202, 31);
+            linkLabel1.Size = new Size(292, 46);
             linkLabel1.TabIndex = 29;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Datos Ingrsados";
@@ -82,24 +79,24 @@
             dataGridViewpaciente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewpaciente.BackgroundColor = Color.PowderBlue;
             dataGridViewpaciente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewpaciente.Location = new Point(38, 90);
-            dataGridViewpaciente.Margin = new Padding(2);
+            dataGridViewpaciente.Location = new Point(54, 135);
             dataGridViewpaciente.Name = "dataGridViewpaciente";
             dataGridViewpaciente.ReadOnly = true;
             dataGridViewpaciente.RowHeadersWidth = 62;
-            dataGridViewpaciente.Size = new Size(856, 189);
+            dataGridViewpaciente.Size = new Size(1356, 315);
             dataGridViewpaciente.TabIndex = 28;
             // 
             // CONSULTA_PACIENTE
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(946, 375);
+            ClientSize = new Size(1462, 585);
             Controls.Add(btneliminar);
             Controls.Add(btneditar);
             Controls.Add(linkLabel1);
             Controls.Add(dataGridViewpaciente);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "CONSULTA_PACIENTE";
             Text = "CONSULTA_PACIENTE";
             Load += CONSULTA_PACIENTE_Load;

@@ -52,13 +52,11 @@
             CERRAR = new PictureBox();
             MINIMIZAR = new PictureBox();
             MAXIMIZAR = new PictureBox();
-            pictureBox2 = new PictureBox();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CERRAR).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MINIMIZAR).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MAXIMIZAR).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -71,7 +69,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(2, 1, 0, 1);
-            menuStrip1.Size = new Size(1094, 28);
+            menuStrip1.Size = new Size(1094, 38);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -80,7 +78,7 @@
             eNTRADAToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { iNGRESARToolStripMenuItem, aTRASToolStripMenuItem });
             eNTRADAToolStripMenuItem.ForeColor = Color.MediumAquamarine;
             eNTRADAToolStripMenuItem.Name = "eNTRADAToolStripMenuItem";
-            eNTRADAToolStripMenuItem.Size = new Size(112, 26);
+            eNTRADAToolStripMenuItem.Size = new Size(163, 36);
             eNTRADAToolStripMenuItem.Text = "ENTRADA";
             // 
             // iNGRESARToolStripMenuItem
@@ -88,14 +86,14 @@
             iNGRESARToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nUEVOHOSPITALToolStripMenuItem, nUEVOPACIENTEToolStripMenuItem, nUEVOMEDICOToolStripMenuItem, nUEVODIAGNOSTICOToolStripMenuItem, toolStripMenuItem1, nUEVOSALAToolStripMenuItem });
             iNGRESARToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             iNGRESARToolStripMenuItem.Name = "iNGRESARToolStripMenuItem";
-            iNGRESARToolStripMenuItem.Size = new Size(163, 24);
+            iNGRESARToolStripMenuItem.Size = new Size(240, 34);
             iNGRESARToolStripMenuItem.Text = "INGRESAR";
             // 
             // nUEVOHOSPITALToolStripMenuItem
             // 
             nUEVOHOSPITALToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             nUEVOHOSPITALToolStripMenuItem.Name = "nUEVOHOSPITALToolStripMenuItem";
-            nUEVOHOSPITALToolStripMenuItem.Size = new Size(240, 24);
+            nUEVOHOSPITALToolStripMenuItem.Size = new Size(356, 36);
             nUEVOHOSPITALToolStripMenuItem.Text = "NUEVO HOSPITAL";
             nUEVOHOSPITALToolStripMenuItem.Click += nUEVOHOSPITALToolStripMenuItem_Click;
             // 
@@ -103,7 +101,7 @@
             // 
             nUEVOPACIENTEToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             nUEVOPACIENTEToolStripMenuItem.Name = "nUEVOPACIENTEToolStripMenuItem";
-            nUEVOPACIENTEToolStripMenuItem.Size = new Size(240, 24);
+            nUEVOPACIENTEToolStripMenuItem.Size = new Size(356, 36);
             nUEVOPACIENTEToolStripMenuItem.Text = "NUEVO PACIENTE";
             nUEVOPACIENTEToolStripMenuItem.Click += nUEVOPACIENTEToolStripMenuItem_Click;
             // 
@@ -111,7 +109,7 @@
             // 
             nUEVOMEDICOToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             nUEVOMEDICOToolStripMenuItem.Name = "nUEVOMEDICOToolStripMenuItem";
-            nUEVOMEDICOToolStripMenuItem.Size = new Size(240, 24);
+            nUEVOMEDICOToolStripMenuItem.Size = new Size(356, 36);
             nUEVOMEDICOToolStripMenuItem.Text = "NUEVO LABORATORIO";
             nUEVOMEDICOToolStripMenuItem.Click += nUEVOMEDICOToolStripMenuItem_Click;
             // 
@@ -119,7 +117,7 @@
             // 
             nUEVODIAGNOSTICOToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             nUEVODIAGNOSTICOToolStripMenuItem.Name = "nUEVODIAGNOSTICOToolStripMenuItem";
-            nUEVODIAGNOSTICOToolStripMenuItem.Size = new Size(240, 24);
+            nUEVODIAGNOSTICOToolStripMenuItem.Size = new Size(356, 36);
             nUEVODIAGNOSTICOToolStripMenuItem.Text = "NUEVO MEDICO";
             nUEVODIAGNOSTICOToolStripMenuItem.Click += nUEVODIAGNOSTICOToolStripMenuItem_Click;
             // 
@@ -127,14 +125,14 @@
             // 
             toolStripMenuItem1.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(240, 24);
+            toolStripMenuItem1.Size = new Size(356, 36);
             toolStripMenuItem1.Text = "NUEVO DIAGNOSTICO";
             // 
             // nUEVOSALAToolStripMenuItem
             // 
             nUEVOSALAToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             nUEVOSALAToolStripMenuItem.Name = "nUEVOSALAToolStripMenuItem";
-            nUEVOSALAToolStripMenuItem.Size = new Size(240, 24);
+            nUEVOSALAToolStripMenuItem.Size = new Size(356, 36);
             nUEVOSALAToolStripMenuItem.Text = "NUEVA SALA";
             nUEVOSALAToolStripMenuItem.Click += nUEVOSALAToolStripMenuItem_Click;
             // 
@@ -142,7 +140,7 @@
             // 
             aTRASToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             aTRASToolStripMenuItem.Name = "aTRASToolStripMenuItem";
-            aTRASToolStripMenuItem.Size = new Size(163, 24);
+            aTRASToolStripMenuItem.Size = new Size(240, 34);
             aTRASToolStripMenuItem.Text = "ATRAS";
             aTRASToolStripMenuItem.Click += aTRASToolStripMenuItem_Click;
             // 
@@ -151,14 +149,14 @@
             cONSULTAToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { hOSPITALToolStripMenuItem, pACIENTEToolStripMenuItem, lABORATORIOToolStripMenuItem, dIAGNOSTICOToolStripMenuItem, toolStripMenuItem2, sALAToolStripMenuItem });
             cONSULTAToolStripMenuItem.ForeColor = Color.MediumAquamarine;
             cONSULTAToolStripMenuItem.Name = "cONSULTAToolStripMenuItem";
-            cONSULTAToolStripMenuItem.Size = new Size(123, 26);
+            cONSULTAToolStripMenuItem.Size = new Size(175, 36);
             cONSULTAToolStripMenuItem.Text = "CONSULTA";
             // 
             // hOSPITALToolStripMenuItem
             // 
             hOSPITALToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             hOSPITALToolStripMenuItem.Name = "hOSPITALToolStripMenuItem";
-            hOSPITALToolStripMenuItem.Size = new Size(183, 26);
+            hOSPITALToolStripMenuItem.Size = new Size(273, 42);
             hOSPITALToolStripMenuItem.Text = "HOSPITAL";
             hOSPITALToolStripMenuItem.Click += hOSPITALToolStripMenuItem_Click;
             // 
@@ -166,7 +164,7 @@
             // 
             pACIENTEToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             pACIENTEToolStripMenuItem.Name = "pACIENTEToolStripMenuItem";
-            pACIENTEToolStripMenuItem.Size = new Size(183, 26);
+            pACIENTEToolStripMenuItem.Size = new Size(273, 42);
             pACIENTEToolStripMenuItem.Text = "PACIENTE";
             pACIENTEToolStripMenuItem.Click += pACIENTEToolStripMenuItem_Click;
             // 
@@ -174,7 +172,7 @@
             // 
             lABORATORIOToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             lABORATORIOToolStripMenuItem.Name = "lABORATORIOToolStripMenuItem";
-            lABORATORIOToolStripMenuItem.Size = new Size(183, 26);
+            lABORATORIOToolStripMenuItem.Size = new Size(273, 42);
             lABORATORIOToolStripMenuItem.Text = "LABORATORIO";
             lABORATORIOToolStripMenuItem.Click += lABORATORIOToolStripMenuItem_Click;
             // 
@@ -182,7 +180,7 @@
             // 
             dIAGNOSTICOToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             dIAGNOSTICOToolStripMenuItem.Name = "dIAGNOSTICOToolStripMenuItem";
-            dIAGNOSTICOToolStripMenuItem.Size = new Size(183, 26);
+            dIAGNOSTICOToolStripMenuItem.Size = new Size(273, 42);
             dIAGNOSTICOToolStripMenuItem.Text = "MEDICO";
             dIAGNOSTICOToolStripMenuItem.Click += dIAGNOSTICOToolStripMenuItem_Click;
             // 
@@ -190,14 +188,14 @@
             // 
             toolStripMenuItem2.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(183, 26);
+            toolStripMenuItem2.Size = new Size(273, 42);
             toolStripMenuItem2.Text = "DIAGNOSTICO";
             // 
             // sALAToolStripMenuItem
             // 
             sALAToolStripMenuItem.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point);
             sALAToolStripMenuItem.Name = "sALAToolStripMenuItem";
-            sALAToolStripMenuItem.Size = new Size(183, 26);
+            sALAToolStripMenuItem.Size = new Size(273, 42);
             sALAToolStripMenuItem.Text = "SALA";
             sALAToolStripMenuItem.Click += sALAToolStripMenuItem_Click;
             // 
@@ -206,14 +204,14 @@
             aCERCADEToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mEIMBROSDELGRUPOToolStripMenuItem });
             aCERCADEToolStripMenuItem.ForeColor = Color.MediumAquamarine;
             aCERCADEToolStripMenuItem.Name = "aCERCADEToolStripMenuItem";
-            aCERCADEToolStripMenuItem.Size = new Size(130, 26);
+            aCERCADEToolStripMenuItem.Size = new Size(188, 36);
             aCERCADEToolStripMenuItem.Text = "ACERCA DE";
             // 
             // mEIMBROSDELGRUPOToolStripMenuItem
             // 
             mEIMBROSDELGRUPOToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             mEIMBROSDELGRUPOToolStripMenuItem.Name = "mEIMBROSDELGRUPOToolStripMenuItem";
-            mEIMBROSDELGRUPOToolStripMenuItem.Size = new Size(249, 24);
+            mEIMBROSDELGRUPOToolStripMenuItem.Size = new Size(376, 36);
             mEIMBROSDELGRUPOToolStripMenuItem.Text = "MIEMBROS DEL GRUPO";
             // 
             // pictureBox1
@@ -221,10 +219,10 @@
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Properties.Resources.log;
-            pictureBox1.Location = new Point(921, 44);
+            pictureBox1.Location = new Point(882, 44);
             pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(162, 110);
+            pictureBox1.Size = new Size(201, 148);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -270,29 +268,17 @@
             MAXIMIZAR.TabStop = false;
             MAXIMIZAR.Click += MAXIMIZAR_Click;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBox2.Image = Properties.Resources.ho;
-            pictureBox2.Location = new Point(0, 31);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(1094, 531);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 6;
-            pictureBox2.TabStop = false;
-            // 
             // MENU_PRINCIPAL
             // 
             AutoScaleMode = AutoScaleMode.Inherit;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            BackgroundImageLayout = ImageLayout.Stretch;
+            BackgroundImage = Properties.Resources.Hosp;
+            BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(1094, 592);
             Controls.Add(MAXIMIZAR);
             Controls.Add(MINIMIZAR);
             Controls.Add(CERRAR);
             Controls.Add(menuStrip1);
             Controls.Add(pictureBox1);
-            Controls.Add(pictureBox2);
             FormBorderStyle = FormBorderStyle.None;
             MainMenuStrip = menuStrip1;
             Margin = new Padding(2);
@@ -300,13 +286,13 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             WindowState = FormWindowState.Maximized;
+            Load += MENU_PRINCIPAL_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)CERRAR).EndInit();
             ((System.ComponentModel.ISupportInitialize)MINIMIZAR).EndInit();
             ((System.ComponentModel.ISupportInitialize)MAXIMIZAR).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -337,6 +323,5 @@
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem nUEVOSALAToolStripMenuItem;
         private ToolStripMenuItem sALAToolStripMenuItem;
-        private PictureBox pictureBox2;
     }
 }

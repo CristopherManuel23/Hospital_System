@@ -55,7 +55,7 @@
             btnEliminarMedico.ForeColor = Color.MediumAquamarine;
             btnEliminarMedico.Location = new Point(287, 464);
             btnEliminarMedico.Name = "btnEliminarMedico";
-            btnEliminarMedico.Size = new Size(173, 65);
+            btnEliminarMedico.Size = new Size(173, 45);
             btnEliminarMedico.TabIndex = 18;
             btnEliminarMedico.Text = "ELIMINAR";
             btnEliminarMedico.UseVisualStyleBackColor = false;
@@ -68,7 +68,7 @@
             btnEditarMedico.ForeColor = Color.MediumAquamarine;
             btnEditarMedico.Location = new Point(70, 464);
             btnEditarMedico.Name = "btnEditarMedico";
-            btnEditarMedico.Size = new Size(173, 65);
+            btnEditarMedico.Size = new Size(173, 45);
             btnEditarMedico.TabIndex = 17;
             btnEditarMedico.Text = "EDITAR";
             btnEditarMedico.UseVisualStyleBackColor = false;
@@ -91,12 +91,13 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(1363, 574);
+            ClientSize = new Size(1363, 533);
             Controls.Add(linkLabel1);
             Controls.Add(btnEliminarMedico);
             Controls.Add(btnEditarMedico);
             Controls.Add(TABLAMEDICO);
             Name = "CONSULTA_MEDICO";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CONSULTA_MEDICO";
             Load += CONSULTA_MEDICO_Load;
             ((System.ComponentModel.ISupportInitialize)TABLAMEDICO).EndInit();

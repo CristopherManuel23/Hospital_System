@@ -16,6 +16,7 @@ namespace Hospital_System
         public MENU_PRINCIPAL()
         {
             InitializeComponent();
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
         private void aTRASToolStripMenuItem_Click(object sender, EventArgs e)
@@ -28,7 +29,7 @@ namespace Hospital_System
         private void nUEVOHOSPITALToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Nuevo_Hosp nuevo_hospital = new Nuevo_Hosp();
-            nuevo_hospital.Show();
+            nuevo_hospital.ShowDialog();
         }
 
         private void CERRAR_Click(object sender, EventArgs e)
@@ -81,20 +82,20 @@ namespace Hospital_System
         private void nUEVOPACIENTEToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PACIENTE nuevo_paciente = new PACIENTE();
-            nuevo_paciente.Show();
+            nuevo_paciente.ShowDialog();
         }
 
         private void nUEVOMEDICOToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Laboratorio nuevo_Laboratorio = new Laboratorio();
-            nuevo_Laboratorio.Show();
+            nuevo_Laboratorio.ShowDialog();
         }
 
         private void nUEVODIAGNOSTICOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             Nuevo_Medic nuevo_medic = new Nuevo_Medic();
-            nuevo_medic.Show();
+            nuevo_medic.ShowDialog();
         }
 
         private void nUEVOLABORATORIOToolStripMenuItem_Click(object sender, EventArgs e)
@@ -105,13 +106,18 @@ namespace Hospital_System
         private void nUEVOSALAToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SALA nueva_sala = new SALA();
-            nueva_sala.Show();
+            nueva_sala.ShowDialog();
         }
 
         private void sALAToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CONSULTA_SALA consultasala = new CONSULTA_SALA();
             consultasala.Show();
+        }
+
+        private void MENU_PRINCIPAL_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

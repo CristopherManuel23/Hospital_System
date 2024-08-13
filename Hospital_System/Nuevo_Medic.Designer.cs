@@ -66,7 +66,7 @@
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            panel2.Location = new Point(28, 96);
+            panel2.Location = new Point(38, 101);
             panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
             panel2.Size = new Size(898, 358);
@@ -108,7 +108,7 @@
             btnCancelarMedico.BackColor = Color.Black;
             btnCancelarMedico.FlatAppearance.BorderColor = Color.Black;
             btnCancelarMedico.ForeColor = Color.MediumAquamarine;
-            btnCancelarMedico.Location = new Point(632, 205);
+            btnCancelarMedico.Location = new Point(688, 249);
             btnCancelarMedico.Name = "btnCancelarMedico";
             btnCancelarMedico.Size = new Size(173, 42);
             btnCancelarMedico.TabIndex = 10;
@@ -120,7 +120,7 @@
             // 
             btnGuardarMedico.BackColor = Color.Black;
             btnGuardarMedico.ForeColor = Color.MediumAquamarine;
-            btnGuardarMedico.Location = new Point(632, 125);
+            btnGuardarMedico.Location = new Point(688, 188);
             btnGuardarMedico.Name = "btnGuardarMedico";
             btnGuardarMedico.Size = new Size(173, 43);
             btnGuardarMedico.TabIndex = 9;
@@ -169,6 +169,7 @@
             Controls.Add(linkLabel1);
             Controls.Add(panel2);
             Name = "Nuevo_Medic";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Nuevo_Medic";
             Load += Nuevo_Medic_Load;
             panel2.ResumeLayout(false);
