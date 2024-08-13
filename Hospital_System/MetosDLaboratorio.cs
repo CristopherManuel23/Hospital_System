@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//alejandro capellan estuvo aqui
+
 namespace Hospital_System
 {
     public class MetosDLaboratorio

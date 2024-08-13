@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hospital_System;
-//55
+
 namespace Hospital_System
 {
     public partial class CONSULTA_HOSPITAL : Form

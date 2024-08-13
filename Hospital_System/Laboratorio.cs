@@ -127,6 +127,7 @@ namespace Hospital_System
         private void Laboratorio_Load(object sender, EventArgs e)
         {
             LlenarComboBox2();
+            //holamundo
         }
     }
 }
