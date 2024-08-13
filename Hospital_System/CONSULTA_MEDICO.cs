@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -33,12 +34,12 @@ namespace Hospital_System
                 {
                     DataGridViewRow row = TABLAMEDICO.SelectedRows[0];
                     Editar = true;
-                    int cuiMedico = Convert.ToInt32(row.Cells["CUI_Medico"].Value.ToString());
-                    string nombre = row.Cells["Nombre_Medico"].Value.ToString();
-                    string especialidad = row.Cells["Especialidad_Medico"].Value.ToString();
-                    int codigoHospital = Convert.ToInt32(row.Cells["Codigo_Hospital"].Value.ToString());
+                    int cui_Medico = row.Cells["CUI_Medico"].Value != null ? Convert.ToInt32(row.Cells["CUI_Medico"].Value.ToString()) : 0;
+                    string nombre = row.Cells["Nombre_Medico"].Value != null ? row.Cells["Nombre_Medico"].Value.ToString() : string.Empty;
+                    string especialidad = row.Cells["Especialidad_Medico"].Value != null ? row.Cells["Especialidad_Medico"].Value.ToString() : string.Empty;
+                    int codigo_Hospital = row.Cells["codigo_hospital"].Value != null ? Convert.ToInt32(row.Cells["codigo_hospital"].Value.ToString()) : 0;
 
-                    Nuevo_Medic nuevoMedico = new Nuevo_Medic(cuiMedico, nombre, especialidad, codigoHospital);
+                    Nuevo_Medic nuevoMedico = new Nuevo_Medic(cui_Medico, nombre, especialidad, codigo_Hospital);
                     nuevoMedico.Show();
                     this.Dispose();
                 }
@@ -60,10 +61,10 @@ namespace Hospital_System
                 if (TABLAMEDICO.SelectedRows.Count > 0)
                 {
 
-                    int cuiMedico = Convert.ToInt32(TABLAMEDICO.CurrentRow.Cells["CUI_Medico"].Value.ToString());
+                    int cui_Medico = Convert.ToInt32(TABLAMEDICO.CurrentRow.Cells["CUI_Medico"].Value.ToString());
 
 
-                    metodo.EliminarMedico(cuiMedico);
+                    metodo.EliminarMedico(cui_Medico);
 
                     MessageBox.Show("Eliminado correctamente");
                     ActualizarTABLAMEDICO();
@@ -84,13 +85,21 @@ namespace Hospital_System
         {
             try
             {
-                DataTable dataTable = metodo.MostrarMedicos();
+                SqlConnection AbrirConexion = conexion.AbrirConexion();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM MEDICO", AbrirConexion);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
                 TABLAMEDICO.DataSource = dataTable;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar los datos: " + ex.Message);
             }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+
         }
     }
 }

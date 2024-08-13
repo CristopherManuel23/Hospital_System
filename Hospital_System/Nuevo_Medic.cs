@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Hospital_System
 {
@@ -16,73 +18,66 @@ namespace Hospital_System
         Conexion conexion = new Conexion();
         private bool Editar = false;
         int cuiMedico;
+
+
         public Nuevo_Medic()
         {
             InitializeComponent();
+
         }
 
-        public Nuevo_Medic(int cui_medico, string nombre, string especialidad, int codigoHospital)
+        public Nuevo_Medic(int cui_Medico, string nombre, string especialidad, int codigo_Hospital)
         {
-            this.cuiMedico = cui_medico;
+            InitializeComponent();
+
+            cuiMedico = cui_Medico;
             txtNombreMedico.Text = nombre;
             txtEspecialidadMedico.Text = especialidad;
-            cbcodigoHospital.Text = codigoHospital.ToString();
+            cbcodigoHospital.SelectedValue = codigo_Hospital;
             Editar = true;
         }
 
         private void btnGuardarMedico_Click(object sender, EventArgs e)
         {
-            if (txtNombreMedico.Text == "" || txtEspecialidadMedico.Text == "" || cbcodigoHospital.Text == "")
+            try
             {
-                MessageBox.Show("Complete todos los campos antes de guardar.", "Campos vacíos", MessageBoxButtons.OK);
-                return;
-            }
+               
+                if (txtNombreMedico.Text == "" || txtEspecialidadMedico.Text == "" || cbcodigoHospital.Text == "")
+                {
+                    MessageBox.Show("Complete todos los campos antes de guardar.", "Campos vacíos", MessageBoxButtons.OK);
+                    return;
+                }
 
-            if (Editar == false)
-            {
-                try
+                
+                string nombre = txtNombreMedico.Text;
+                string especialidad = txtEspecialidadMedico.Text;              
+                int codigo_Hospital = Convert.ToInt32(cbcodigoHospital.SelectedValue);
+
+                MetodosdeMedico Metodos = new MetodosdeMedico();
+
+                if (!Editar)
                 {
                     
-                    conexion.AbrirConexion();
-                    metodo.InsertarMedico(txtNombreMedico.Text, txtEspecialidadMedico.Text, Convert.ToInt32(cbcodigoHospital.Text)); // Ajustado
-                    conexion.CerrarConexion();
-
-                    MessageBox.Show("Se ha guardado con éxito el nuevo médico.");
+                    Metodos.InsertarMedicoBoton(nombre, especialidad, codigo_Hospital);
+                    MessageBox.Show("Se ha guardado con éxito el nuevo medico");
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Error al abrir la conexión: " + ex.Message);
-                }
-                finally
-                {
-                    conexion.CerrarConexion();
-                }
-            }
-            else
-            {
-                try
-                {
-
-                    int cui_medico = cuiMedico;
-                    string nombre = txtNombreMedico.Text;
-                    string especialidad = txtEspecialidadMedico.Text;
-                    int codigoHospital = Convert.ToInt32(cbcodigoHospital.Text);
-
-                    metodo.EditarMedico(cui_medico, nombre, especialidad, codigoHospital);
-                    InitializeComponent();
-
-                    MessageBox.Show("Se editó correctamente.");
-                    metodo.MostrarMedicos();
-                    LimpiarForm();
+                    MetodosdeMedico medico = new MetodosdeMedico();
+                    int cui_Medico = cuiMedico;
+                    Metodos.EditarMedicoBoton(cui_Medico, nombre, especialidad, codigo_Hospital);
+                    MessageBox.Show("Se editó correctamente");
                     Editar = false;
-                    this.Dispose();
-                    Form consulta = new CONSULTA_MEDICO();
-                    consulta.Show();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("No se pudo editar los datos por: " + ex.Message);
-                }
+
+                LimpiarForm();
+                Form consulta = new CONSULTA_MEDICO();
+                consulta.Show();
+                this.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar los datos: " + ex.Message);
             }
         }
 
@@ -95,7 +90,42 @@ namespace Hospital_System
         {
             txtNombreMedico.Clear();
             txtEspecialidadMedico.Clear();
-            cbcodigoHospital.Clear();
+
         }
+
+        private void LlenarComboBox2()
+        {
+            SqlConnection conexion = null;
+            SqlCommand cmd = null;
+            SqlDataReader reader = null;
+
+            try
+            {
+                conexion = this.conexion.AbrirConexion();
+                cmd = new SqlCommand("SELECT codigo_hospital, Nombre_Hospital FROM HOSPITAL", conexion);
+                reader = cmd.ExecuteReader();
+                DataTable dataTable = new DataTable();
+                dataTable.Load(reader);
+                cbcodigoHospital.DataSource = dataTable;
+                cbcodigoHospital.DisplayMember = "Nombre_Hospital";
+                cbcodigoHospital.ValueMember = "codigo_hospital";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+            }
+            finally
+            {
+                if (reader != null) reader.Close();
+                if (conexion != null) this.conexion.CerrarConexion();
+            }
+        }
+
+        private void Nuevo_Medic_Load(object sender, EventArgs e)
+        {
+            LlenarComboBox2();
+        }
+
+
     }
 }

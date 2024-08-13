@@ -75,6 +75,7 @@
             // cbcodigoHospital
             // 
             cbcodigoHospital.BackColor = Color.DimGray;
+            cbcodigoHospital.ForeColor = SystemColors.Window;
             cbcodigoHospital.FormattingEnabled = true;
             cbcodigoHospital.Location = new Point(327, 249);
             cbcodigoHospital.Name = "cbcodigoHospital";
@@ -169,6 +170,7 @@
             Controls.Add(panel2);
             Name = "Nuevo_Medic";
             Text = "Nuevo_Medic";
+            Load += Nuevo_Medic_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
