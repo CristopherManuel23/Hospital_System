@@ -83,7 +83,7 @@
             dataGridViewpaciente.Name = "dataGridViewpaciente";
             dataGridViewpaciente.ReadOnly = true;
             dataGridViewpaciente.RowHeadersWidth = 62;
-            dataGridViewpaciente.Size = new Size(1356, 315);
+            dataGridViewpaciente.Size = new Size(1442, 315);
             dataGridViewpaciente.TabIndex = 28;
             // 
             // CONSULTA_PACIENTE
@@ -91,7 +91,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(1462, 585);
+            ClientSize = new Size(1543, 585);
             Controls.Add(btneliminar);
             Controls.Add(btneditar);
             Controls.Add(linkLabel1);
