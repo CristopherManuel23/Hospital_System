@@ -57,8 +57,7 @@ namespace Hospital_System
 
         private void pACIENTEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CONSULTA_PACIENTE consulta_paciente = new CONSULTA_PACIENTE();
-            consulta_paciente.Show();
+            
         }
 
         private void lABORATORIOToolStripMenuItem_Click(object sender, EventArgs e)
@@ -80,8 +79,7 @@ namespace Hospital_System
 
         private void nUEVOPACIENTEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PACIENTE nuevo_paciente = new PACIENTE();
-            nuevo_paciente.Show();
+
         }
 
         private void nUEVOMEDICOToolStripMenuItem_Click(object sender, EventArgs e)
@@ -99,19 +97,7 @@ namespace Hospital_System
 
         private void nUEVOLABORATORIOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void nUEVOSALAToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SALA nueva_sala = new SALA();
-            nueva_sala.Show();
-        }
-
-        private void sALAToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CONSULTA_SALA consultasala = new CONSULTA_SALA();
-            consultasala.Show();
+            
         }
     }
 }
