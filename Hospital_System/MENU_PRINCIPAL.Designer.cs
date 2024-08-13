@@ -84,7 +84,7 @@
             iNGRESARToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nUEVOHOSPITALToolStripMenuItem, nUEVOPACIENTEToolStripMenuItem, nUEVOMEDICOToolStripMenuItem, nUEVODIAGNOSTICOToolStripMenuItem, nUEVOLABORATORIOToolStripMenuItem });
             iNGRESARToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             iNGRESARToolStripMenuItem.Name = "iNGRESARToolStripMenuItem";
-            iNGRESARToolStripMenuItem.Size = new Size(180, 24);
+            iNGRESARToolStripMenuItem.Size = new Size(163, 24);
             iNGRESARToolStripMenuItem.Text = "INGRESAR";
             // 
             // nUEVOHOSPITALToolStripMenuItem
