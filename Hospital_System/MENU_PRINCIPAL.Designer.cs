@@ -127,6 +127,7 @@
             toolStripMenuItem1.Name = "toolStripMenuItem1";
             toolStripMenuItem1.Size = new Size(356, 36);
             toolStripMenuItem1.Text = "NUEVO DIAGNOSTICO";
+            toolStripMenuItem1.Click += toolStripMenuItem1_Click;
             // 
             // nUEVOSALAToolStripMenuItem
             // 
@@ -190,6 +191,7 @@
             toolStripMenuItem2.Name = "toolStripMenuItem2";
             toolStripMenuItem2.Size = new Size(273, 42);
             toolStripMenuItem2.Text = "DIAGNOSTICO";
+            toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
             // sALAToolStripMenuItem
             // 
@@ -211,8 +213,9 @@
             // 
             mEIMBROSDELGRUPOToolStripMenuItem.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
             mEIMBROSDELGRUPOToolStripMenuItem.Name = "mEIMBROSDELGRUPOToolStripMenuItem";
-            mEIMBROSDELGRUPOToolStripMenuItem.Size = new Size(376, 36);
-            mEIMBROSDELGRUPOToolStripMenuItem.Text = "MIEMBROS DEL GRUPO";
+            mEIMBROSDELGRUPOToolStripMenuItem.Size = new Size(462, 36);
+            mEIMBROSDELGRUPOToolStripMenuItem.Text = "INFORMACION DEL PROGRAMA";
+            mEIMBROSDELGRUPOToolStripMenuItem.Click += mEIMBROSDELGRUPOToolStripMenuItem_Click;
             // 
             // pictureBox1
             // 
@@ -235,7 +238,7 @@
             CERRAR.Location = new Point(1063, 0);
             CERRAR.Margin = new Padding(2);
             CERRAR.Name = "CERRAR";
-            CERRAR.Size = new Size(31, 28);
+            CERRAR.Size = new Size(31, 38);
             CERRAR.SizeMode = PictureBoxSizeMode.StretchImage;
             CERRAR.TabIndex = 3;
             CERRAR.TabStop = false;
@@ -249,7 +252,7 @@
             MINIMIZAR.Location = new Point(993, 0);
             MINIMIZAR.Margin = new Padding(2);
             MINIMIZAR.Name = "MINIMIZAR";
-            MINIMIZAR.Size = new Size(31, 28);
+            MINIMIZAR.Size = new Size(31, 38);
             MINIMIZAR.SizeMode = PictureBoxSizeMode.StretchImage;
             MINIMIZAR.TabIndex = 4;
             MINIMIZAR.TabStop = false;
@@ -262,7 +265,7 @@
             MAXIMIZAR.Location = new Point(1028, 0);
             MAXIMIZAR.Margin = new Padding(2);
             MAXIMIZAR.Name = "MAXIMIZAR";
-            MAXIMIZAR.Size = new Size(31, 28);
+            MAXIMIZAR.Size = new Size(31, 38);
             MAXIMIZAR.SizeMode = PictureBoxSizeMode.StretchImage;
             MAXIMIZAR.TabIndex = 5;
             MAXIMIZAR.TabStop = false;

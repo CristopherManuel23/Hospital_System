@@ -61,7 +61,7 @@ namespace Hospital_System
                     int ch = Convert.ToInt32(row.Cells["Codigo_Hospital"].Value.ToString());
 
                     SALA nuevasala = new SALA(codigosala, nombre, cama, ch);
-                    nuevasala.Show();
+                    nuevasala.ShowDialog();
                     this.Dispose();
                 }
                 catch (Exception ex)

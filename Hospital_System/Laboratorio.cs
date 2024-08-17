@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Hospital_System
 {
@@ -20,6 +21,7 @@ namespace Hospital_System
         public Laboratorio()
         {
             InitializeComponent();
+            DeshabilitarControles();
         }
 
         /*Metodo para Llenar el Combobox*/
@@ -100,10 +102,10 @@ namespace Hospital_System
 
                 // Limpiar el formulario y cerrar el actual
                 limpiarForm();
-                this.Dispose();
                 Form consulta = new ConsultaLaboratorio();
-                consulta.Show();
-               
+                consulta.ShowDialog();
+                this.Dispose();
+
             }
             catch (Exception ex)
             {
@@ -127,7 +129,31 @@ namespace Hospital_System
         private void Laboratorio_Load(object sender, EventArgs e)
         {
             LlenarComboBox2();
-            //holamundo
+        }
+
+        private void btnHabilitar_Click(object sender, EventArgs e)
+        {
+            HabilitarControles();
+        }
+
+        // Método para deshabilitar los controles de entrada
+        private void DeshabilitarControles()
+        {
+            txtNombre.Enabled = false;
+            txtDireccion.Enabled = false;
+            mtbTelefono.Enabled = false;
+            comboBox1.Enabled = false;
+            button1.Enabled = false;
+        }
+
+        // Método para habilitar los controles de entrada
+        private void HabilitarControles()
+        {
+            txtNombre.Enabled = true;
+            txtDireccion.Enabled = true;
+            mtbTelefono.Enabled = true;
+            comboBox1.Enabled = true;
+            button1.Enabled = true;
         }
     }
 }

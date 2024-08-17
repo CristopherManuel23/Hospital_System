@@ -13,7 +13,7 @@ namespace Hospital_System
 
         private void txtusuario_Enter(object sender, EventArgs e)
         {
-            
+
             if (txtusuario.Text == "USUARIO")
             {
                 txtusuario.Text = "";
@@ -22,7 +22,7 @@ namespace Hospital_System
 
         }
 
-        private void txtusuario_Leave(object sender, EventArgs e)
+       private void txtusuario_Leave(object sender, EventArgs e)
         {
             if (txtusuario.Text == "")
             {
@@ -30,7 +30,7 @@ namespace Hospital_System
                 txtusuario.ForeColor = Color.DimGray;
             }
 
-        }
+        } 
 
         private void txtcontrasenia_Enter(object sender, EventArgs e)
         {
@@ -73,9 +73,9 @@ namespace Hospital_System
                     {
                         MessageBox.Show("Bienvenido al sistema");
                         MENU_PRINCIPAL MP = new MENU_PRINCIPAL();
-                        MP.Show();
+                        MP.ShowDialog();
                         this.Hide();
-                        
+
                     }
                     else
                     {
@@ -101,7 +101,7 @@ namespace Hospital_System
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Application.Exit();
         }
 
         private void btnminimizar_Click(object sender, EventArgs e)
@@ -110,6 +110,11 @@ namespace Hospital_System
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LOGIN_KeyDown(object sender, KeyEventArgs e)
         {
 
         }

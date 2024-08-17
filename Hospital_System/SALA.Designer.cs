@@ -30,6 +30,7 @@
         {
             linkLabel1 = new LinkLabel();
             panel2 = new Panel();
+            btnHabilitar = new Button();
             cmbch = new ComboBox();
             txtcama = new MaskedTextBox();
             label6 = new Label();
@@ -57,6 +58,7 @@
             // panel2
             // 
             panel2.BackColor = Color.DimGray;
+            panel2.Controls.Add(btnHabilitar);
             panel2.Controls.Add(cmbch);
             panel2.Controls.Add(txtcama);
             panel2.Controls.Add(label6);
@@ -69,15 +71,29 @@
             panel2.Location = new Point(74, 142);
             panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(996, 361);
+            panel2.Size = new Size(915, 361);
             panel2.TabIndex = 23;
+            // 
+            // btnHabilitar
+            // 
+            btnHabilitar.BackColor = Color.MediumAquamarine;
+            btnHabilitar.ForeColor = Color.Black;
+            btnHabilitar.Location = new Point(672, 113);
+            btnHabilitar.Name = "btnHabilitar";
+            btnHabilitar.Size = new Size(173, 43);
+            btnHabilitar.TabIndex = 18;
+            btnHabilitar.Text = "HABILITAR";
+            btnHabilitar.UseVisualStyleBackColor = false;
+            btnHabilitar.Click += btnHabilitar_Click;
             // 
             // cmbch
             // 
             cmbch.BackColor = SystemColors.ControlDarkDark;
-            cmbch.ForeColor = SystemColors.Info;
+            cmbch.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbch.FlatStyle = FlatStyle.Popup;
+            cmbch.ForeColor = Color.White;
             cmbch.FormattingEnabled = true;
-            cmbch.Location = new Point(229, 240);
+            cmbch.Location = new Point(221, 244);
             cmbch.Margin = new Padding(4, 5, 4, 5);
             cmbch.Name = "cmbch";
             cmbch.Size = new Size(315, 34);
@@ -88,7 +104,7 @@
             // 
             txtcama.BackColor = Color.DimGray;
             txtcama.ForeColor = Color.White;
-            txtcama.Location = new Point(371, 164);
+            txtcama.Location = new Point(363, 168);
             txtcama.Mask = "0000";
             txtcama.Name = "txtcama";
             txtcama.Size = new Size(173, 35);
@@ -99,7 +115,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Times New Roman", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label6.ForeColor = Color.MediumAquamarine;
-            label6.Location = new Point(45, 78);
+            label6.Location = new Point(37, 82);
             label6.Name = "label6";
             label6.Size = new Size(143, 32);
             label6.TabIndex = 16;
@@ -110,7 +126,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label1.ForeColor = Color.MediumAquamarine;
-            label1.Location = new Point(45, 167);
+            label1.Location = new Point(37, 171);
             label1.Name = "label1";
             label1.Size = new Size(310, 32);
             label1.TabIndex = 5;
@@ -121,18 +137,19 @@
             btncancelar.BackColor = Color.Black;
             btncancelar.FlatAppearance.BorderColor = Color.Black;
             btncancelar.ForeColor = Color.MediumAquamarine;
-            btncancelar.Location = new Point(781, 229);
+            btncancelar.Location = new Point(672, 237);
             btncancelar.Name = "btncancelar";
             btncancelar.Size = new Size(173, 42);
             btncancelar.TabIndex = 10;
             btncancelar.Text = "CANCELAR";
             btncancelar.UseVisualStyleBackColor = false;
+            btncancelar.Click += btncancelar_Click;
             // 
             // btnguardar
             // 
             btnguardar.BackColor = Color.Black;
             btnguardar.ForeColor = Color.MediumAquamarine;
-            btnguardar.Location = new Point(781, 167);
+            btnguardar.Location = new Point(672, 175);
             btnguardar.Name = "btnguardar";
             btnguardar.Size = new Size(173, 43);
             btnguardar.TabIndex = 9;
@@ -145,7 +162,7 @@
             txtnombre.BackColor = Color.DimGray;
             txtnombre.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             txtnombre.ForeColor = Color.White;
-            txtnombre.Location = new Point(229, 75);
+            txtnombre.Location = new Point(221, 79);
             txtnombre.Name = "txtnombre";
             txtnombre.Size = new Size(315, 35);
             txtnombre.TabIndex = 3;
@@ -155,7 +172,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label4.ForeColor = Color.MediumAquamarine;
-            label4.Location = new Point(45, 242);
+            label4.Location = new Point(37, 246);
             label4.Name = "label4";
             label4.Size = new Size(150, 32);
             label4.TabIndex = 8;
@@ -166,10 +183,12 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(1144, 563);
+            ClientSize = new Size(1068, 563);
             Controls.Add(linkLabel1);
             Controls.Add(panel2);
             Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "SALA";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SALA";
@@ -192,5 +211,6 @@
         private TextBox txtnombre;
         private Label label4;
         private ComboBox cmbch;
+        private Button btnHabilitar;
     }
 }

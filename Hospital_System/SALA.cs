@@ -52,7 +52,7 @@ namespace Hospital_System
             try
             {
                 // Validar campos vacíos
-                if (txtnombre.Text == "" || txtcama.Text == ""  || cmbch.Text == "")
+                if (txtnombre.Text == "" || txtcama.Text == "" || cmbch.Text == "")
                 {
                     MessageBox.Show("Complete todos los campos antes de guardar.", "Campos vacíos", MessageBoxButtons.OK);
                     return;
@@ -83,7 +83,7 @@ namespace Hospital_System
                 // Limpiar el formulario y cerrar el actual
                 limpiarForm();
                 Form consulta = new CONSULTA_SALA();
-                consulta.Show();
+                consulta.ShowDialog();
                 this.Dispose();
             }
             catch (Exception ex)
@@ -111,7 +111,35 @@ namespace Hospital_System
 
         private void cmbch_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btnHabilitar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Método para deshabilitar los controles de entrada
+        private void DeshabilitarControles()
+        {
+            txtnombre.Enabled = false;
+            txtcama.Enabled = false;
+            cmbch.Enabled = false;
+            btnguardar.Enabled = false;
+        }
+
+        // Método para habilitar los controles de entrada
+        private void HabilitarControles()
+        {
+            txtnombre.Enabled = true;
+            txtcama.Enabled = true;
+            cmbch.Enabled = true;
+            btnguardar.Enabled = true;
         }
     }
 }

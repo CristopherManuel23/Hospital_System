@@ -98,7 +98,10 @@
             Controls.Add(linkLabel1);
             Controls.Add(dataGridViewsala);
             Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "CONSULTA_SALA";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CONSULTA_SALA";
             Load += CONSULTA_SALA_Load;

@@ -96,6 +96,8 @@
             Controls.Add(btnEliminarMedico);
             Controls.Add(btnEditarMedico);
             Controls.Add(TABLAMEDICO);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "CONSULTA_MEDICO";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CONSULTA_MEDICO";

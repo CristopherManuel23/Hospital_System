@@ -23,6 +23,7 @@ namespace Hospital_System
         public Nuevo_Medic()
         {
             InitializeComponent();
+            DeshabilitarControles();
 
         }
 
@@ -41,23 +42,23 @@ namespace Hospital_System
         {
             try
             {
-               
+
                 if (txtNombreMedico.Text == "" || txtEspecialidadMedico.Text == "" || cbcodigoHospital.Text == "")
                 {
                     MessageBox.Show("Complete todos los campos antes de guardar.", "Campos vacíos", MessageBoxButtons.OK);
                     return;
                 }
 
-                
+
                 string nombre = txtNombreMedico.Text;
-                string especialidad = txtEspecialidadMedico.Text;              
+                string especialidad = txtEspecialidadMedico.Text;
                 int codigo_Hospital = Convert.ToInt32(cbcodigoHospital.SelectedValue);
 
                 MetodosdeMedico Metodos = new MetodosdeMedico();
 
                 if (!Editar)
                 {
-                    
+
                     Metodos.InsertarMedicoBoton(nombre, especialidad, codigo_Hospital);
                     MessageBox.Show("Se ha guardado con éxito el nuevo medico");
                 }
@@ -72,7 +73,7 @@ namespace Hospital_System
 
                 LimpiarForm();
                 Form consulta = new CONSULTA_MEDICO();
-                consulta.Show();
+                consulta.ShowDialog();
                 this.Dispose();
             }
             catch (Exception ex)
@@ -126,6 +127,27 @@ namespace Hospital_System
             LlenarComboBox2();
         }
 
+        private void btnHabilitar_Click(object sender, EventArgs e)
+        {
+            HabilitarControles();
+        }
 
+        // Método para deshabilitar los controles de entrada
+        private void DeshabilitarControles()
+        {
+            txtNombreMedico.Enabled = false;
+            txtEspecialidadMedico.Enabled = false;
+            cbcodigoHospital.Enabled = false;
+            btnGuardarMedico.Enabled = false;
+        }
+
+        // Método para habilitar los controles de entrada
+        private void HabilitarControles()
+        {
+            txtNombreMedico.Enabled = true;
+            txtEspecialidadMedico.Enabled = true;
+            cbcodigoHospital.Enabled = true;
+            btnGuardarMedico.Enabled = true;
+        }
     }
 }

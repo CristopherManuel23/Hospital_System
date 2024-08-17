@@ -110,7 +110,7 @@ namespace Hospital_System
                         string cantidadCamas = row.Cells["Cantidad_camas_Hospital"].Value.ToString();
 
                     Nuevo_Hosp nuevoHosp = new Nuevo_Hosp(codigohospital, nombre, direccion, telefono, cantidadCamas);
-                    nuevoHosp.Show();
+                    nuevoHosp.ShowDialog();
                     this.Dispose();
                 }
                     catch (Exception ex)

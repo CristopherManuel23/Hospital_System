@@ -30,6 +30,7 @@
         {
             linkLabel1 = new LinkLabel();
             panel2 = new Panel();
+            btnHabilitar = new Button();
             txtcama = new MaskedTextBox();
             txtregistro = new MaskedTextBox();
             txtsexo = new TextBox();
@@ -63,6 +64,7 @@
             // panel2
             // 
             panel2.BackColor = Color.DimGray;
+            panel2.Controls.Add(btnHabilitar);
             panel2.Controls.Add(txtcama);
             panel2.Controls.Add(txtregistro);
             panel2.Controls.Add(txtsexo);
@@ -81,8 +83,20 @@
             panel2.Location = new Point(74, 142);
             panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(881, 518);
+            panel2.Size = new Size(831, 518);
             panel2.TabIndex = 21;
+            // 
+            // btnHabilitar
+            // 
+            btnHabilitar.BackColor = Color.MediumAquamarine;
+            btnHabilitar.ForeColor = Color.Black;
+            btnHabilitar.Location = new Point(624, 320);
+            btnHabilitar.Name = "btnHabilitar";
+            btnHabilitar.Size = new Size(173, 43);
+            btnHabilitar.TabIndex = 17;
+            btnHabilitar.Text = "HABILITAR";
+            btnHabilitar.UseVisualStyleBackColor = false;
+            btnHabilitar.Click += button1btnHabilitar_Click;
             // 
             // txtcama
             // 
@@ -173,7 +187,7 @@
             btncancelar.BackColor = Color.Black;
             btncancelar.FlatAppearance.BorderColor = Color.Black;
             btncancelar.ForeColor = Color.MediumAquamarine;
-            btncancelar.Location = new Point(671, 451);
+            btncancelar.Location = new Point(624, 443);
             btncancelar.Name = "btncancelar";
             btncancelar.Size = new Size(173, 42);
             btncancelar.TabIndex = 10;
@@ -185,7 +199,7 @@
             // 
             btnguardar.BackColor = Color.Black;
             btnguardar.ForeColor = Color.MediumAquamarine;
-            btnguardar.Location = new Point(671, 371);
+            btnguardar.Location = new Point(624, 380);
             btnguardar.Name = "btnguardar";
             btnguardar.Size = new Size(173, 43);
             btnguardar.TabIndex = 9;
@@ -241,10 +255,12 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(1033, 711);
+            ClientSize = new Size(979, 711);
             Controls.Add(linkLabel1);
             Controls.Add(panel2);
             Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "PACIENTE";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PACIENTE";
@@ -273,5 +289,6 @@
         private Label label4;
         private Label label3;
         private Label label2;
+        private Button btnHabilitar;
     }
 }

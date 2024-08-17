@@ -20,6 +20,7 @@ namespace Hospital_System
         public PACIENTE()
         {
             InitializeComponent();
+            DeshabilitarControles();
         }
 
         private void PACIENTE_Load(object sender, EventArgs e)
@@ -42,6 +43,58 @@ namespace Hospital_System
             Editar = true;
         }
 
+
+        private void btnguardar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtregistro.Text == "" || txtcama.Text == "" || txtnombre.Text == "" || txtdireccion.Text == "" || txtfecha.Text == "" || txtsexo.Text == "")
+                {
+                    MessageBox.Show("Complete todos los campos antes de guardar.", "Campos vacíos", MessageBoxButtons.OK);
+                    return;
+                }
+
+                // Código para editar
+                string registro = txtregistro.Text;
+                string cama = txtcama.Text;
+                string nombre = txtnombre.Text;
+                string direccion = txtdireccion.Text;
+                string fecha = txtfecha.Text;
+                string sexo = txtsexo.Text;
+
+                metodos_paciente Metodopa = new metodos_paciente();
+
+                if (!Editar)
+                {
+                    Metodopa.Insertarpaciente( registro, cama, nombre, direccion, fecha, sexo);
+                    MessageBox.Show("Se ha guardado con éxito el nuevo paciente");
+                }
+                else
+                {
+                    int cuipaciente = cui_paciente;
+                    Metodopa.Editarpaciente(cuipaciente, registro, cama, nombre, direccion, fecha, sexo);
+                    MessageBox.Show("Se editó correctamente");
+                    Editar = false;
+                }
+
+                // Limpiar el formulario y cerrar el actual
+                limpiarForm();
+                Form consulta = new CONSULTA_PACIENTE();
+                consulta.ShowDialog();
+                this.Dispose();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo editar los datos por: " + ex.Message);
+            }
+        }
+
+        private void btncancelar_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
         private void limpiarForm()
         {
             txtregistro.Clear();
@@ -52,71 +105,34 @@ namespace Hospital_System
             txtsexo.Clear();
 
         }
-      
 
-        private void btnguardar_Click_1(object sender, EventArgs e)
+        private void button1btnHabilitar_Click(object sender, EventArgs e)
         {
-            if (txtregistro.Text == "" || txtcama.Text == "" || txtnombre.Text == "" || txtdireccion.Text == "" || txtfecha.Text == "" || txtsexo.Text == "")
-            {
-                MessageBox.Show("Complete todos los campos antes de guardar.", "Campos vacíos", MessageBoxButtons.OK);
-                return;
-            }
-
-            if (Editar == false)
-            {
-                try
-                {
-                    // Código para guardar
-                    conexion.AbrirConexion();
-                    Metodopa.Insertarpaciente(txtregistro.Text, txtcama.Text, txtnombre.Text, txtdireccion.Text, txtfecha.Text, txtsexo.Text);
-                    conexion.CerrarConexion();
-
-                    MessageBox.Show("Se ha guardado con éxito el nuevo hospital");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al abrir la conexión: " + ex.Message);
-                }
-                finally
-                {
-                    conexion.CerrarConexion();
-                }
-            }
-            else
-            {
-                try
-                {
-                    // Código para editar
-                    int cuipaciente = cui_paciente;
-                    string registro = txtregistro.Text;
-                    string cama = txtcama.Text;
-                    string nombre = txtnombre.Text;
-                    string direccion = txtdireccion.Text;
-                    string fecha = txtfecha.Text;
-                    string sexo = txtsexo.Text;
-
-
-                    Metodopa.Editarpaciente(cuipaciente, registro, cama, nombre, direccion, fecha, sexo);
-                    InitializeComponent();
-
-                    MessageBox.Show("Se editó correctamente");
-                    Metodopa.Mostrarpacientes();
-                    limpiarForm();
-                    Editar = false;
-                    this.Dispose();
-                    Form consulta = new CONSULTA_PACIENTE();
-                    consulta.Show();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("No se pudo editar los datos por: " + ex.Message);
-                }
-            }
+            HabilitarControles();
         }
 
-        private void btncancelar_Click_1(object sender, EventArgs e)
+        // Método para deshabilitar los controles de entrada
+        private void DeshabilitarControles()
         {
-            this.Dispose();
+            txtnombre.Enabled = false;
+            txtregistro.Enabled = false;
+            txtcama.Enabled = false;
+            txtdireccion.Enabled = false;
+            txtfecha.Enabled = false;
+            txtsexo.Enabled = false;
+            btnguardar.Enabled = false;
+        }
+
+        // Método para habilitar los controles de entrada
+        private void HabilitarControles()
+        {
+            txtnombre.Enabled = true;
+            txtregistro.Enabled = true;
+            txtcama.Enabled = true;
+            txtdireccion.Enabled = true;
+            txtfecha.Enabled = true;
+            txtsexo.Enabled = true;
+            btnguardar.Enabled = true;
         }
     }
 }

@@ -53,25 +53,25 @@ namespace Hospital_System
         private void hOSPITALToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CONSULTA_HOSPITAL nuevo_hospital = new CONSULTA_HOSPITAL();
-            nuevo_hospital.Show();
+            nuevo_hospital.ShowDialog();
         }
 
         private void pACIENTEToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CONSULTA_PACIENTE consulta_paciente = new CONSULTA_PACIENTE();
-            consulta_paciente.Show();
+            consulta_paciente.ShowDialog();
         }
 
         private void lABORATORIOToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ConsultaLaboratorio nuevo_Laboratorio = new ConsultaLaboratorio();
-            nuevo_Laboratorio.Show();
+            nuevo_Laboratorio.ShowDialog();
         }
 
         private void dIAGNOSTICOToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CONSULTA_MEDICO consulta_medico = new CONSULTA_MEDICO();
-            consulta_medico.Show();
+            consulta_medico.ShowDialog();
         }
 
         private void mEDICOToolStripMenuItem_Click(object sender, EventArgs e)
@@ -112,12 +112,30 @@ namespace Hospital_System
         private void sALAToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CONSULTA_SALA consultasala = new CONSULTA_SALA();
-            consultasala.Show();
+            consultasala.ShowDialog();
         }
 
         private void MENU_PRINCIPAL_Load(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Nuevo_Diagnosticos nuevo = new Nuevo_Diagnosticos();
+            nuevo.ShowDialog();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Cunsulta_Diagnostico nuevo = new Cunsulta_Diagnostico();
+            nuevo.ShowDialog();
+        }
+
+        private void mEIMBROSDELGRUPOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InformaciondelPrograma info = new InformaciondelPrograma();
+            info.ShowDialog();
         }
     }
 }

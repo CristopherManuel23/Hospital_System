@@ -64,7 +64,7 @@ namespace Hospital_System
                     int codigohospital = Convert.ToInt32(row.Cells["codigo_Laboratorio"].Value.ToString());
 
                     Laboratorio nuevo = new Laboratorio(codigo_Laboratorio, nombre, direccion, telefono, codigohospital);
-                    nuevo.Show();
+                    nuevo.ShowDialog();
                     this.Dispose();
                 }
                 catch (Exception ex)
@@ -109,6 +109,7 @@ namespace Hospital_System
             {
                 conexion.CerrarConexion();
             }
+            //60
         }
     }
 }

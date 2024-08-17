@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel2 = new Panel();
+            button1btnHabilitar = new Button();
             mtbCama = new MaskedTextBox();
             mtbTelefono = new MaskedTextBox();
             label1 = new Label();
@@ -46,6 +47,7 @@
             // panel2
             // 
             panel2.BackColor = Color.DimGray;
+            panel2.Controls.Add(button1btnHabilitar);
             panel2.Controls.Add(mtbCama);
             panel2.Controls.Add(mtbTelefono);
             panel2.Controls.Add(label1);
@@ -60,8 +62,20 @@
             panel2.Location = new Point(51, 133);
             panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(996, 410);
+            panel2.Size = new Size(931, 410);
             panel2.TabIndex = 14;
+            // 
+            // button1btnHabilitar
+            // 
+            button1btnHabilitar.BackColor = Color.MediumAquamarine;
+            button1btnHabilitar.ForeColor = Color.Black;
+            button1btnHabilitar.Location = new Point(709, 172);
+            button1btnHabilitar.Name = "button1btnHabilitar";
+            button1btnHabilitar.Size = new Size(173, 43);
+            button1btnHabilitar.TabIndex = 13;
+            button1btnHabilitar.Text = "HABILITAR";
+            button1btnHabilitar.UseVisualStyleBackColor = false;
+            button1btnHabilitar.Click += button1btnHabilitar_Click;
             // 
             // mtbCama
             // 
@@ -109,7 +123,7 @@
             btncancelar.BackColor = Color.Black;
             btncancelar.FlatAppearance.BorderColor = Color.Black;
             btncancelar.ForeColor = Color.MediumAquamarine;
-            btncancelar.Location = new Point(677, 320);
+            btncancelar.Location = new Point(709, 313);
             btncancelar.Name = "btncancelar";
             btncancelar.Size = new Size(173, 42);
             btncancelar.TabIndex = 10;
@@ -121,7 +135,7 @@
             // 
             btnguardar.BackColor = Color.Black;
             btnguardar.ForeColor = Color.MediumAquamarine;
-            btnguardar.Location = new Point(677, 240);
+            btnguardar.Location = new Point(709, 244);
             btnguardar.Name = "btnguardar";
             btnguardar.Size = new Size(173, 43);
             btnguardar.TabIndex = 9;
@@ -190,9 +204,11 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1099, 604);
+            ClientSize = new Size(1033, 604);
             Controls.Add(linkLabel1);
             Controls.Add(panel2);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Nuevo_Hosp";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Nuevo_Hosp";
@@ -215,5 +231,6 @@
         private LinkLabel linkLabel1;
         private MaskedTextBox mtbCama;
         private MaskedTextBox mtbTelefono;
+        private Button button1btnHabilitar;
     }
 }

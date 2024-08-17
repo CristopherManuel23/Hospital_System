@@ -40,7 +40,7 @@
             btneliminar.BackColor = Color.Black;
             btneliminar.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btneliminar.ForeColor = Color.MediumAquamarine;
-            btneliminar.Location = new Point(268, 502);
+            btneliminar.Location = new Point(267, 479);
             btneliminar.Name = "btneliminar";
             btneliminar.Size = new Size(173, 52);
             btneliminar.TabIndex = 31;
@@ -53,7 +53,7 @@
             btneditar.BackColor = Color.Black;
             btneditar.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btneditar.ForeColor = Color.MediumAquamarine;
-            btneditar.Location = new Point(55, 502);
+            btneditar.Location = new Point(54, 479);
             btneditar.Name = "btneditar";
             btneditar.Size = new Size(173, 52);
             btneditar.TabIndex = 30;
@@ -67,7 +67,7 @@
             linkLabel1.BackColor = Color.Black;
             linkLabel1.Font = new Font("Times New Roman", 20F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             linkLabel1.LinkColor = Color.MediumAquamarine;
-            linkLabel1.Location = new Point(54, 65);
+            linkLabel1.Location = new Point(54, 76);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(292, 46);
             linkLabel1.TabIndex = 29;
@@ -79,11 +79,11 @@
             dataGridViewpaciente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewpaciente.BackgroundColor = Color.PowderBlue;
             dataGridViewpaciente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewpaciente.Location = new Point(54, 135);
+            dataGridViewpaciente.Location = new Point(45, 135);
             dataGridViewpaciente.Name = "dataGridViewpaciente";
             dataGridViewpaciente.ReadOnly = true;
             dataGridViewpaciente.RowHeadersWidth = 62;
-            dataGridViewpaciente.Size = new Size(1442, 315);
+            dataGridViewpaciente.Size = new Size(1702, 315);
             dataGridViewpaciente.TabIndex = 28;
             // 
             // CONSULTA_PACIENTE
@@ -91,13 +91,16 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(1543, 585);
+            ClientSize = new Size(1788, 552);
             Controls.Add(btneliminar);
             Controls.Add(btneditar);
             Controls.Add(linkLabel1);
             Controls.Add(dataGridViewpaciente);
             Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "CONSULTA_PACIENTE";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CONSULTA_PACIENTE";
             Load += CONSULTA_PACIENTE_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewpaciente).EndInit();

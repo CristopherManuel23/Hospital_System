@@ -97,6 +97,8 @@
             Controls.Add(btneliminar);
             Controls.Add(btneditar);
             Controls.Add(dataGridView1);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "CONSULTA_HOSPITAL";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "a";

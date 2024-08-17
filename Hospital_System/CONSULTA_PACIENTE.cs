@@ -70,7 +70,7 @@ namespace Hospital_System
                     string sexo = row.Cells["Sexo_Paciente"].Value.ToString();
 
                     PACIENTE nuevopaciente = new PACIENTE(cuipaciente, registro, cama, nombre, direccion, fecha, sexo);
-                    nuevopaciente.Show();
+                    nuevopaciente.ShowDialog();
                     this.Dispose();
                 }
                 catch (Exception ex)

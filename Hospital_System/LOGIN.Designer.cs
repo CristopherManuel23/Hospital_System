@@ -159,6 +159,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Form1_Load;
+            KeyDown += LOGIN_KeyDown;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)btncerrar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnminimizar).EndInit();

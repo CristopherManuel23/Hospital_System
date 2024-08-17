@@ -14,11 +14,12 @@ namespace Hospital_System
         Metodos Metodo = new Metodos();
         Conexion conexion = new Conexion();
         private bool Editar = false;
-        int codigoHospital ;
+        int codigoHospital;
 
         public Nuevo_Hosp()
         {
             InitializeComponent();
+            DeshabilitarControles();
         }
 
 
@@ -28,7 +29,6 @@ namespace Hospital_System
             InitializeComponent();
 
             // Asignar valores a los controles del formulario
-            //this.codigo_hospital = codigo_hospital; // Almacena el código del hospital en la variable
             codigoHospital = codigo_hospital;
             txtnombre.Text = nombre;
             txtdireccion.Text = direccion;
@@ -38,69 +38,55 @@ namespace Hospital_System
         }
         private void btnguardar_Click(object sender, EventArgs e)
         {
-
-            if (txtnombre.Text == "" || txtdireccion.Text == "" || mtbTelefono.Text == "" || mtbCama.Text == "")
+            try
             {
-                MessageBox.Show("Complete todos los campos antes de guardar.", "Campos vacíos", MessageBoxButtons.OK);
-                return;
-            }
+                if (txtnombre.Text == "" || txtdireccion.Text == "" || mtbTelefono.Text == "" || mtbCama.Text == "")
+                {
+                    MessageBox.Show("Complete todos los campos antes de guardar.", "Campos vacíos", MessageBoxButtons.OK);
+                    return;
+                }
 
-            if (Editar == false)
-            {
-                try
-                {
-                    // Código para guardar
-                    conexion.AbrirConexion();
-                    Metodo.InsertarHospital_boton(txtnombre.Text, txtdireccion.Text, mtbTelefono.Text, mtbCama.Text);
-                    conexion.CerrarConexion();
+                // Código para editar
+                string nombre = txtnombre.Text;
+                string direccion = txtdireccion.Text;
+                string telefono = mtbTelefono.Text;
+                string cantidadCamas = mtbCama.Text;
 
-                    MessageBox.Show("Se ha guardado con éxito el nuevo hospital");
-                }
-                catch (Exception ex)
+                Metodos Metodo = new Metodos();
+
+                if (!Editar)
                 {
-                    MessageBox.Show("Error al abrir la conexión: " + ex.Message);
+                    // Código para insertar
+                    Metodo.Insertar(nombre, direccion, telefono, cantidadCamas);
+                    MessageBox.Show("Se ha guardado con éxito el nuevo Laboratorio");
                 }
-                finally
-                {
-                    conexion.CerrarConexion();
-                }
-            }
-            else
-            {
-                try
+                else
                 {
                     // Código para editar
-                    int codigo_hospital = codigoHospital;
-                    string nombre = txtnombre.Text;
-                    string direccion = txtdireccion.Text;
-                    string telefono = mtbTelefono.Text;
-                    string cantidadCamas = mtbCama.Text;
-                   
-
-                    Metodo.EditarHospital(nombre, direccion, telefono, cantidadCamas, codigo_hospital);
-                    InitializeComponent();
-
+                    int codigohospital = codigoHospital;
+                    Metodo.Editar(codigohospital, nombre, direccion, telefono, cantidadCamas);
                     MessageBox.Show("Se editó correctamente");
-                    Metodo.MostrarHospitales();
-                    limpiarForm();
                     Editar = false;
-                    this.Dispose();
-                    Form consulta = new CONSULTA_HOSPITAL();
-                    consulta.Show();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("No se pudo editar los datos por: " + ex.Message);
-                }
-            }
 
+                // Limpiar el formulario y cerrar el actual
+                limpiarForm();
+                Form consulta = new     CONSULTA_HOSPITAL();
+                consulta.ShowDialog();
+                this.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar los datos: " + ex.Message);
+            }
 
         }
 
 
+
         private void btncancelar_Click(object sender, EventArgs e)
         {
-         this.Dispose();  
+            this.Dispose();
         }
 
         private void limpiarForm()
@@ -109,6 +95,30 @@ namespace Hospital_System
             txtdireccion.Clear();
             mtbTelefono.Clear();
             mtbCama.Clear();
+        }
+
+        private void button1btnHabilitar_Click(object sender, EventArgs e)
+        {
+            HabilitarControles();
+        }
+        // Método para deshabilitar los controles de entrada
+        private void DeshabilitarControles()
+        {
+            txtnombre.Enabled = false;
+            txtdireccion.Enabled = false;
+            mtbTelefono.Enabled = false;
+            mtbCama.Enabled = false;
+            btnguardar.Enabled = false;
+        }
+
+        // Método para habilitar los controles de entrada
+        private void HabilitarControles()
+        {
+            txtnombre.Enabled = true;
+            txtdireccion.Enabled = true;
+            mtbTelefono.Enabled = true;
+            mtbCama.Enabled = true;
+            btnguardar.Enabled = true;
         }
     }
 }
